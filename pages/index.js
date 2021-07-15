@@ -3,7 +3,7 @@ import React, { useState, Component } from "react";
 
 export default function Form() {
   const aimag = {
-    songolt1: <option value="songolt2">songolt 6</option>,
+    songolt1: <option value="songolt2">songolt 10</option>,
     songolt2: <option value="songolt1">songolt 7</option>,
   };
   const sum1 = {
@@ -14,17 +14,9 @@ export default function Form() {
     songolt1: <option value="songolt2">sum21</option>,
     songolt2: <option value="songolt1">sum22</option>,
   };
-  const [SumOp, setSumOp] = useState(null);
   const [AimagDuureg, setAimagDuureg] = useState(Object.values(aimag));
   const [Sum, setSum] = useState(Object.values(Object.values(sum1)));
   const [value, setValue] = useState(aimag.songolt2);
-
-  if (value == "songolt1") {
-    setSum(Object.values(Object.values(sum1)));
-  }
-  if (value == "songolt2") {
-    setSum(Object.values(Object.values(sum2)));
-  }
 
   function handleChange(e) {
     setValue(e.target.value);
